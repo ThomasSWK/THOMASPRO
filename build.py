@@ -129,7 +129,7 @@ def render_hero(data):
         photo = '<span class="monogram">TS</span>'
     else:
         photo = f'<img src="{base}{esc(profile["photo"])}" alt="Photo de {esc(profile["fullName"])}">'
-    return f"""  <section id="accueil" class="hero">
+    return f"""  <section id="accueil" class="hero invert">
     <div class="container hero-grid">
       <div class="hero-text">
         <span class="kicker reveal">{esc(hero['kicker'])}</span>
@@ -157,9 +157,11 @@ def render_about(data):
     about = data["about"]
     paragraphs = "\n".join(f"        <p>{esc(p)}</p>" for p in about["paragraphs"])
     return f"""  <section id="a-propos" class="alt">
-    <div class="container about-text">
+    <div class="container">
       <h2 class="reveal">{esc(about['heading'])}</h2>
+      <div class="about-columns reveal">
 {paragraphs}
+      </div>
     </div>
   </section>
 """
@@ -290,7 +292,7 @@ def render_alternance(data):
         </div>"""
         for i in a["items"]
     )
-    return f"""  <section id="alternance" class="alt">
+    return f"""  <section id="alternance" class="invert">
     <div class="container">
       <div class="alternance-box reveal">
         <span class="kicker">{esc(a['kicker'])}</span>
