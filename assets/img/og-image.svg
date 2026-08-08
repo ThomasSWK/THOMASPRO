@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#FAFAF8"/>
+  <rect x="0" y="0" width="1200" height="630" fill="none" stroke="#E4E2DC" stroke-width="2"/>
+  <text x="90" y="270" font-family="Georgia, 'Times New Roman', serif" font-size="72" fill="#10192B" letter-spacing="-1">Thomas Szuwalski</text>
+  <text x="90" y="330" font-family="Arial, sans-serif" font-size="28" fill="#2C4A6E" letter-spacing="2">COMMUNICATION · RELATIONS MÉDIAS · AFFAIRES PUBLIQUES</text>
+  <text x="90" y="400" font-family="Arial, sans-serif" font-size="24" fill="#6B7280">Étudiant en BTS Communication — recherche d'alternance</text>
+  <rect x="90" y="460" width="64" height="4" fill="#2C4A6E"/>
+</svg>
