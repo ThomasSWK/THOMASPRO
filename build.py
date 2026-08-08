@@ -148,7 +148,7 @@ def render_about(data):
     if profile.get("photoPlaceholder", True):
         photo = '<span class="monogram">TS</span>'
     else:
-        photo = f'<img src="{esc(profile["photo"])}" alt="Photo de {esc(profile["fullName"])}">'
+        photo = f'<img src="{data["site"]["basePath"]}{esc(profile["photo"])}" alt="Photo de {esc(profile["fullName"])}">'
     return f"""  <section id="a-propos" class="alt">
     <div class="container about-grid">
       <div class="about-photo reveal">
