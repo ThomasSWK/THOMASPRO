@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://thomasswk.github.io/THOMASPRO/sitemap.xml
