@@ -335,6 +335,10 @@ p + p { margin-top: 1rem; }
 
 /* ---------- Contact ---------- */
 .contact-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: clamp(2.5rem, 6vw, 5rem); }
+.contact-grid--solo { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; text-align: center; }
+.contact-grid--solo .contact-info-list { align-items: center; }
+.contact-grid--solo .contact-info-list li { text-align: center; }
+.contact-grid--solo form { display: none; }
 .contact-info-list { margin-top: 2rem; display: flex; flex-direction: column; gap: 1.1rem; }
 .contact-info-list li { font-size: 0.95rem; }
 .contact-info-list .label { display: block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-muted); margin-bottom: 0.25rem; }
