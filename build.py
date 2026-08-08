@@ -120,21 +120,33 @@ def render_footer(data, base):
 def render_hero(data):
     hero = data["hero"]
     profile = data["profile"]
+    base = data["site"]["basePath"]
     ctas = "\n".join(
         f'        <a class="btn btn-{cta["style"]}" href="{esc(cta["href"])}">{esc(cta["label"])}</a>'
         for cta in hero["ctas"]
     )
+    if profile.get("photoPlaceholder", True):
+        photo = '<span class="monogram">TS</span>'
+    else:
+        photo = f'<img src="{base}{esc(profile["photo"])}" alt="Photo de {esc(profile["fullName"])}">'
     return f"""  <section id="accueil" class="hero">
-    <div class="container">
-      <span class="kicker reveal">{esc(hero['kicker'])}</span>
-      <h1 class="reveal">{esc(hero['headline'])}</h1>
-      <p class="hero-intro reveal">{esc(hero['intro'])}</p>
-      <div class="btn-row reveal">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <span class="kicker reveal">{esc(hero['kicker'])}</span>
+        <h1 class="reveal">{esc(hero['headline'])}</h1>
+        <p class="hero-intro reveal">{esc(hero['intro'])}</p>
+        <div class="btn-row reveal">
 {ctas}
+        </div>
+        <div class="hero-links reveal">
+          <a href="{esc(profile['linkedin'])}" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="mailto:{esc(profile['email'])}">{esc(profile['email'])}</a>
+        </div>
       </div>
-      <div class="hero-links reveal">
-        <a href="{esc(profile['linkedin'])}" target="_blank" rel="noopener">LinkedIn ↗</a>
-        <a href="mailto:{esc(profile['email'])}">{esc(profile['email'])}</a>
+      <div class="hero-photo reveal">
+        <div class="hero-photo-inner">
+          {photo}
+        </div>
       </div>
     </div>
   </section>
@@ -143,22 +155,11 @@ def render_hero(data):
 
 def render_about(data):
     about = data["about"]
-    profile = data["profile"]
     paragraphs = "\n".join(f"        <p>{esc(p)}</p>" for p in about["paragraphs"])
-    if profile.get("photoPlaceholder", True):
-        photo = '<span class="monogram">TS</span>'
-    else:
-        photo = f'<img src="{data["site"]["basePath"]}{esc(profile["photo"])}" alt="Photo de {esc(profile["fullName"])}">'
     return f"""  <section id="a-propos" class="alt">
-    <div class="container about-grid">
-      <div class="about-photo reveal">
-        {photo}
-      </div>
-      <div class="about-text">
-        <span class="kicker reveal">{esc(about['kicker'])}</span>
-        <h2 class="reveal">{esc(about['heading'])}</h2>
+    <div class="container about-text">
+      <h2 class="reveal">{esc(about['heading'])}</h2>
 {paragraphs}
-      </div>
     </div>
   </section>
 """
@@ -186,7 +187,6 @@ def render_timeline(data):
     return f"""  <section id="parcours">
     <div class="container">
       <div class="section-head reveal">
-        <span class="kicker">{esc(t['kicker'])}</span>
         <h2>{esc(t['heading'])}</h2>
       </div>
       <div class="timeline-columns">
@@ -235,7 +235,6 @@ def render_projects(data, base):
     return f"""  <section id="projets" class="alt">
     <div class="container">
       <div class="section-head reveal">
-        <span class="kicker">{esc(p['kicker'])}</span>
         <h2>{esc(p['heading'])}</h2>
         <p class="lede">{esc(p['intro'])}</p>
       </div>
@@ -268,7 +267,6 @@ def render_skills(data):
     return f"""  <section id="competences">
     <div class="container">
       <div class="section-head reveal">
-        <span class="kicker">{esc(s['kicker'])}</span>
         <h2>{esc(s['heading'])}</h2>
       </div>
       <div class="skills-grid">
@@ -320,7 +318,6 @@ def render_cv(data, base):
     <div class="container cv-layout">
       <div class="cv-preview reveal">CV<br>{esc(data['profile']['fullName'])}</div>
       <div class="reveal">
-        <span class="kicker">{esc(cv['kicker'])}</span>
         <h2>{esc(cv['heading'])}</h2>
         <p class="lede">{esc(cv['intro'])}</p>
         <div class="btn-row" style="margin-top:1.6rem">{btn}</div>
@@ -353,7 +350,6 @@ def render_contact(data):
     return f"""  <section id="contact" class="alt">
     <div class="container {'contact-grid' if form_enabled else 'contact-grid contact-grid--solo'}">
       <div class="reveal">
-        <span class="kicker">{esc(c['kicker'])}</span>
         <h2>{esc(c['heading'])}</h2>
         <p class="lede">{esc(c['intro'])}</p>
         <ul class="contact-info-list">
