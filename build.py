@@ -333,7 +333,7 @@ def render_cv(data, base):
 
 def render_contact(data):
     c = data["contact"]
-    profile = data["profile"]
+    profile = data["profile"]; form_enabled = c.get("formEnabled", True)
     fields_map = {
         "Nom": ("nom", "text"),
         "Email": ("email", "email"),
@@ -351,7 +351,7 @@ def render_contact(data):
     inputs_html = "\n".join(inputs)
 
     return f"""  <section id="contact" class="alt">
-    <div class="container contact-grid">
+    <div class="container {'contact-grid' if form_enabled else 'contact-grid contact-grid--solo'}">
       <div class="reveal">
         <span class="kicker">{esc(c['kicker'])}</span>
         <h2>{esc(c['heading'])}</h2>
