@@ -1,0 +1,227 @@
+{
+  "site": {
+    "url": "https://thomasswk.github.io/THOMASPRO",
+    "basePath": "/THOMASPRO",
+    "basePath_note_for_editor": "Laissez vide (\"\") si vous utilisez un domaine perso ou un repo GitHub nommé <votre-utilisateur>.github.io. Mettez \"/nom-du-repo\" si vous publiez via GitHub Pages sur un repo de projet (ex: \"/portfolio\").",
+    "title": "Thomas Szuwalski | Communication & Relations médias",
+    "description": "Étudiant en BTS Communication (Sup Academy), à la recherche d'une alternance en communication institutionnelle, relations médias et affaires publiques. Disponible dès septembre 2026.",
+    "locale": "fr_FR",
+    "favicon": "/assets/img/favicon.svg",
+    "ogImage": "/assets/img/og-image.svg",
+    "themeColor": "#0F1A2B"
+  },
+
+  "profile": {
+    "firstName": "Thomas",
+    "lastName": "Szuwalski",
+    "fullName": "Thomas Szuwalski",
+    "roles": ["Communication", "Relations médias", "Affaires publiques"],
+    "email": "thomas.szuwalski@gmail.com",
+    "phone": "06 51 51 64 70",
+    "linkedin": "https://www.linkedin.com/in/thomasszuwalski/",
+    "location": "Choisy-au-Bac",
+    "mobility": "Permis B + véhicule — mobile jusqu'à 1h00 de trajet autour de Compiègne",
+    "photo": "/assets/img/profile.jpg",
+    "photoPlaceholder": false
+  },
+
+  "hero": {
+    "kicker": "Communication · Relations médias · Affaires publiques",
+    "headline": "Thomas Szuwalski",
+    "intro": "Étudiant en BTS Communication à Sup Academy, actuellement à la recherche d'une alternance. Je m'intéresse particulièrement à la communication institutionnelle, aux relations médias et aux affaires publiques.",
+    "ctas": [
+      { "label": "Découvrir mon profil", "href": "#a-propos", "style": "primary" },
+      { "label": "Voir mes projets", "href": "#projets", "style": "secondary" },
+      { "label": "Télécharger mon CV", "href": "#cv", "style": "ghost" }
+    ]
+  },
+
+  "about": {
+    "heading": "À propos",
+    "kicker": "Qui je suis",
+    "paragraphs": [
+      "Je m'appelle Thomas Szuwalski, je suis étudiant en BTS Communication à Sup Academy. Avant d'arriver à la communication, j'ai suivi un parcours en science politique puis en droit, deux disciplines qui m'ont donné une bonne compréhension du fonctionnement des institutions et des enjeux publics. Cet intérêt pour la vie publique ne date pas d'hier : dès le lycée, j'ai été élu vice-président du Conseil de la Vie Lycéenne et représentant à l'Académie d'Amiens.",
+      "C'est en tant que conseiller municipal, chargé de la communication et membre de la commission communication de l'Agglomération de la Région de Compiègne, que j'ai découvert concrètement ce métier : rédaction de contenus, communication sur les réseaux sociaux, participation à la communication autour des événements locaux. Cette expérience de terrain a confirmé mon envie d'en faire mon métier.",
+      "Ce qui m'intéresse aujourd'hui, c'est tout ce qui touche à la communication institutionnelle, aux relations médias, aux affaires publiques et à la communication de crise : comprendre les enjeux d'une organisation, construire un discours cohérent et savoir l'adapter à différents publics et interlocuteurs.",
+      "Je recherche aujourd'hui une alternance qui me permette de mettre ces compétences en pratique au sein d'une structure exigeante, dans un environnement institutionnel, corporate ou politique."
+    ],
+    "note_for_editor": "Brouillon rédigé à partir des éléments du brief — à relire et personnaliser avant publication."
+  },
+
+  "timeline": {
+    "heading": "Parcours",
+    "kicker": "Formation & expériences",
+    "formations": [
+      {
+        "title": "BTS Communication",
+        "organization": "Sup Academy",
+        "period": "2026 – en cours",
+        "description": "Formation aux techniques et à la stratégie de communication : communication digitale, événementielle, institutionnelle et corporate."
+      },
+      {
+        "title": "Licence Droit — 1ère année",
+        "organization": "Université de Picardie Jules Verne, Amiens",
+        "period": "2025 – 2026",
+        "description": "Approfondissement des bases juridiques utiles à la compréhension des cadres réglementaires et institutionnels."
+      },
+      {
+        "title": "Licence Science politique — 1ère année",
+        "organization": "Université des Antilles, pôle Martinique",
+        "period": "2023 – 2024",
+        "description": "Préparation et participation à une conférence universitaire, interview d'une ministre brésilienne — analyse des institutions et des enjeux publics."
+      },
+      {
+        "title": "Baccalauréat général, mention",
+        "organization": "Lycée Pierre d'Ailly, Compiègne",
+        "period": "2018 – 2021",
+        "description": "Spécialités Histoire-Géographie/Géopolitique/Sciences politiques et Sciences économiques et sociales, option Droit et grands enjeux du monde contemporain."
+      }
+    ],
+    "experiences": [
+      {
+        "title": "Conseiller municipal — Chargé de la communication",
+        "organization": "Choisy-au-Bac",
+        "period": "Depuis mars 2026",
+        "description": "Membre de la commission communication de l'Agglomération de la Région de Compiègne (ARC). Participation à la communication de la collectivité : rédaction et création de contenus, réseaux sociaux, communication autour des événements locaux.",
+        "skills": ["Communication institutionnelle", "Affaires publiques", "Réseaux sociaux"]
+      },
+      {
+        "title": "Agent vacataire",
+        "organization": "Ville de Compiègne — Espace Saint-Pierre des Minimes",
+        "period": "Depuis août 2025",
+        "description": "Accueil du public lors des expositions.",
+        "skills": []
+      },
+      {
+        "title": "Mission d'intérim",
+        "organization": "Temporis Compiègne",
+        "period": "Mai – Sept. 2025 et Mai – Juil. 2026",
+        "description": "Mission chez Sur Un Plateau (location de matériel de réception) et mission de merchandiser pour Difforvert.",
+        "skills": ["Logistique événementielle"]
+      },
+      {
+        "title": "Agent d'accueil événementiel",
+        "organization": "Stade Malherbe Caen",
+        "period": "Oct. 2024 – Fév. 2025",
+        "description": "Accueil, sécurité et gestion des loges VIP lors des événements du club.",
+        "skills": ["Événementiel", "Accueil", "Gestion VIP"]
+      },
+      {
+        "title": "Service client et technique",
+        "organization": "Concentrix (pour Verisure)",
+        "period": "Juin – Août 2024",
+        "description": "Relation client et support technique pour le compte de Verisure.",
+        "skills": ["Relation client"]
+      },
+      {
+        "title": "Militaire de la Gendarmerie nationale",
+        "organization": "Gendarmerie nationale",
+        "period": "2021 – 2023 (puis réserviste depuis 2023)",
+        "description": "Stage à l'École de Gendarmerie de Fontainebleau (dont 2 mois en administration de l'école), militaire du peloton autoroutier de Senlis (60). Diplôme GAV-APJA (niveau 5).",
+        "skills": []
+      },
+      {
+        "title": "Associé",
+        "organization": "Restaurant / Salon de thé",
+        "period": "Nov. 2020 – Août 2021",
+        "description": "Aide en cuisine, préparation de commandes, service en salle, encaissement, gestion.",
+        "skills": []
+      },
+      {
+        "title": "Animateur (BAFA 1)",
+        "organization": "Accueil de loisirs",
+        "period": "2020 – 2021",
+        "description": "Contrats en février et août 2020, puis en août 2021.",
+        "skills": []
+      },
+      {
+        "title": "Engagement lycéen",
+        "organization": "Lycée Pierre d'Ailly, Compiègne",
+        "period": "2018 – 2021",
+        "description": "Vice-président du Conseil de la Vie Lycéenne, élu à l'Académie d'Amiens (CA, CP, CD, CESC, CHS).",
+        "skills": ["Représentation", "Organisation"]
+      }
+    ]
+  },
+
+  "projects": {
+    "heading": "Projets",
+    "kicker": "Réalisations",
+    "intro": "Cette rubrique présentera mes réalisations en communication au fur et à mesure de mes missions.",
+    "emptyState": {
+      "title": "Projets à venir",
+      "text": "Je constitue actuellement mes premières réalisations dans le cadre de mon mandat de conseiller municipal et de mon BTS. Cette section sera enrichie prochainement — n'hésitez pas à me contacter pour en discuter directement."
+    },
+    "items": []
+  },
+
+  "skills": {
+    "heading": "Compétences",
+    "kicker": "Savoir-faire",
+    "categories": [
+      {
+        "title": "Communication",
+        "items": ["Communication institutionnelle", "Communication digitale", "Stratégie de communication", "Communication événementielle", "Communication corporate"]
+      },
+      {
+        "title": "Rédaction",
+        "items": ["Rédaction web", "Publications réseaux sociaux", "Communiqués", "Articles", "Supports institutionnels"]
+      },
+      {
+        "title": "Relations & stratégie",
+        "items": ["Relations médias", "Relations presse", "Affaires publiques", "Veille", "Gestion de crise"]
+      },
+      {
+        "title": "Gestion de projet",
+        "items": ["Organisation d'événements", "Coordination", "Planification", "Travail avec différents interlocuteurs"]
+      },
+      {
+        "title": "Langues",
+        "items": ["Français — courant", "Anglais — intermédiaire"]
+      }
+    ],
+    "tools": {
+      "title": "Outils",
+      "items": ["Canva Pro", "Réseaux sociaux", "Claude AI", "GitHub", "Photoshop (notions)", "Premiere Pro (notions)"]
+    }
+  },
+
+  "alternance": {
+    "heading": "Ce que je recherche",
+    "kicker": "Recherche d'alternance",
+    "intro": "Je recherche une alternance dans le cadre de mon BTS Communication, au sein d'une structure où je pourrai contribuer à des missions de communication institutionnelle, corporate ou événementielle.",
+    "items": [
+      { "label": "Domaines privilégiés", "value": "Communication institutionnelle, relations médias, affaires publiques, communication corporate, gestion de crise" },
+      { "label": "Localisation", "value": "Choisy-au-Bac (agglomération de Compiègne) — permis B + véhicule, mobile jusqu'à 1h00 de trajet" },
+      { "label": "Rythme d'alternance", "value": "2 jours en école / 3 jours en entreprise" },
+      { "label": "Disponibilité", "value": "Septembre 2026" }
+    ],
+    "cta": { "label": "Échangeons", "href": "#contact" }
+  },
+
+  "cv": {
+    "heading": "CV",
+    "kicker": "Curriculum vitae",
+    "intro": "Retrouvez une synthèse de mon parcours et de mes expériences.",
+    "available": true,
+    "fileUrl": "/assets/cv/thomas-szuwalski-cv.pdf",
+    "previewImage": "/assets/img/cv-preview.svg",
+    "downloadLabel": "Télécharger mon CV",
+    "unavailableNote": "CV disponible prochainement."
+  },
+
+  "contact": {
+    "heading": "Contact",
+    "kicker": "Échangeons",
+    "intro": "N'hésitez pas à me contacter pour toute question ou opportunité d'alternance.",
+    "form": {
+      "fields": ["Nom", "Email", "Entreprise", "Message"],
+      "submitLabel": "Envoyer"
+    }
+  },
+
+  "footer": {
+    "tagline": "Communication · Relations médias · Affaires publiques",
+    "copyright": "© 2026 Thomas Szuwalski"
+  }
+}
