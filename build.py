@@ -331,9 +331,7 @@ def render_cv(data, base):
     <div class="container cv-layout">
       <div class="cv-preview reveal">{preview}</div>
       <div class="reveal">
-        <h2>{esc(cv['heading'])}</h2>
-        <p class="lede">{esc(cv['intro'])}</p>
-        <div class="btn-row" style="margin-top:1.6rem">{btn}</div>
+        <div class="btn-row">{btn}</div>
         {note}
       </div>
     </div>
