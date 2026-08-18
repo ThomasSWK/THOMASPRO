@@ -385,6 +385,9 @@ def render_contact(data):
 """
 
 
+ANALYTICS_SNIPPET = '<!-- Cloudflare Web Analytics --><script type=\'module\' src=\'https://static.cloudflareinsights.com/beacon.min.js\' data-cf-beacon=\'{"token": "523bed4e263b4264800731491f5f5d04"}\'></script><!-- End Cloudflare Web Analytics -->'
+
+
 def render_page_shell(data, *, body, head_extra, base, active_is_home):
     return f"""<!doctype html>
 <html lang="fr">
@@ -395,6 +398,7 @@ def render_page_shell(data, *, body, head_extra, base, active_is_home):
 {body}
 {render_footer(data, base)}
   <script src="{base}/assets/js/main.js"></script>
+  {ANALYTICS_SNIPPET}
 </body>
 </html>
 """
