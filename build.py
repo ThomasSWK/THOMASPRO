@@ -295,7 +295,6 @@ def render_alternance(data):
     return f"""  <section id="alternance" class="invert">
     <div class="container">
       <div class="alternance-box reveal">
-        <span class="kicker">{esc(a['kicker'])}</span>
         <h2>{esc(a['heading'])}</h2>
         <p class="lede">{esc(a['intro'])}</p>
         <div class="alternance-grid">
@@ -316,9 +315,10 @@ def render_cv(data, base):
     else:
         btn = f'<span class="btn btn-primary is-disabled" aria-disabled="true">{esc(cv["downloadLabel"])}</span>'
         note = f'<p class="cv-note">{esc(cv["unavailableNote"])}</p>'
+    preview = f'<img src="{base}{esc(cv["previewImage"])}" alt="Aperçu du CV de {esc(data["profile"]["fullName"])}">'
     return f"""  <section id="cv">
     <div class="container cv-layout">
-      <div class="cv-preview reveal">CV<br>{esc(data['profile']['fullName'])}</div>
+      <div class="cv-preview reveal">{preview}</div>
       <div class="reveal">
         <h2>{esc(cv['heading'])}</h2>
         <p class="lede">{esc(cv['intro'])}</p>
