@@ -36,7 +36,6 @@ NAV_ITEMS = [
     ("Accueil", "#accueil"),
     ("À propos", "#a-propos"),
     ("Parcours", "#parcours"),
-    ("Projets", "#projets"),
     ("Compétences", "#competences"),
     ("CV", "#cv"),
     ("Contact", "#contact"),
@@ -172,7 +171,7 @@ def render_timeline_item(item, with_skills=False, minor=False):
     if with_skills and item.get("skills"):
         tags = "".join(f'<span class="tag">{esc(s)}</span>' for s in item["skills"])
         skills_html = f'<div class="timeline-skills">{tags}</div>'
-    css_class = "timeline-item timeline-item--minor reveal" if minor else "timeline-item reveal"
+    css_class = "timeline-item timeline-item--minor" if minor else "timeline-item reveal"
     return f"""        <div class="{css_class}">
           <div class="timeline-period">{esc(item['period'])}</div>
           <h4>{esc(item['title'])}</h4>
@@ -191,10 +190,12 @@ def render_timeline(data):
     other_html = ""
     if other_experiences:
         other_items = "\n".join(render_timeline_item(i, with_skills=True, minor=True) for i in other_experiences)
-        other_html = f"""          <div class="timeline-secondary">
-            <div class="timeline-secondary-title">Autres expériences</div>
+        other_html = f"""          <details class="timeline-secondary">
+            <summary>Autres expériences</summary>
+            <div class="timeline-secondary-list">
 {other_items}
-          </div>
+            </div>
+          </details>
 """
     return f"""  <section id="parcours">
     <div class="container">
@@ -330,10 +331,8 @@ def render_cv(data, base):
     return f"""  <section id="cv">
     <div class="container cv-layout">
       <div class="cv-preview reveal">{preview}</div>
-      <div class="reveal">
-        <div class="btn-row">{btn}</div>
-        {note}
-      </div>
+      <div class="btn-row reveal">{btn}</div>
+      {note}
     </div>
   </section>
 """
@@ -413,7 +412,6 @@ def render_home(data):
         render_hero(data),
         render_about(data),
         render_timeline(data),
-        render_projects(data, base),
         render_skills(data),
         render_alternance(data),
         render_cv(data, base),
