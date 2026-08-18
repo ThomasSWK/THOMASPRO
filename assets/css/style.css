@@ -248,6 +248,23 @@ p + p { margin-top: 1rem; }
 .timeline-org { font-size: 0.88rem; color: var(--color-muted); margin-bottom: 0.5rem; }
 .timeline-item p { font-size: 0.92rem; }
 .timeline-skills { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.7rem; }
+
+.timeline-secondary { margin-top: 1rem; padding-top: 1.6rem; border-top: 1px dashed var(--color-border); }
+.timeline-secondary-title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: 1.2rem;
+}
+.timeline-item--minor { padding-bottom: 1.4rem; opacity: 0.82; }
+.timeline-item--minor::before { width: 6px; height: 6px; left: -4px; background: var(--color-muted); }
+.timeline-item--minor .timeline-period { color: var(--color-muted); font-weight: 500; }
+.timeline-item--minor h4 { font-size: 0.92rem; font-weight: 600; }
+.timeline-item--minor .timeline-org { font-size: 0.82rem; }
+.timeline-item--minor p { font-size: 0.86rem; }
+.timeline-item--minor:last-child { padding-bottom: 0; }
 .tag {
   font-size: 0.72rem;
   font-weight: 600;
