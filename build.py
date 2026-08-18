@@ -167,12 +167,13 @@ def render_about(data):
 """
 
 
-def render_timeline_item(item, with_skills=False):
+def render_timeline_item(item, with_skills=False, minor=False):
     skills_html = ""
     if with_skills and item.get("skills"):
         tags = "".join(f'<span class="tag">{esc(s)}</span>' for s in item["skills"])
         skills_html = f'<div class="timeline-skills">{tags}</div>'
-    return f"""        <div class="timeline-item reveal">
+    css_class = "timeline-item timeline-item--minor reveal" if minor else "timeline-item reveal"
+    return f"""        <div class="{css_class}">
           <div class="timeline-period">{esc(item['period'])}</div>
           <h4>{esc(item['title'])}</h4>
           <div class="timeline-org">{esc(item['organization'])}</div>
@@ -186,6 +187,15 @@ def render_timeline(data):
     t = data["timeline"]
     formations = "\n".join(render_timeline_item(i) for i in t["formations"])
     experiences = "\n".join(render_timeline_item(i, with_skills=True) for i in t["experiences"])
+    other_experiences = t.get("otherExperiences") or []
+    other_html = ""
+    if other_experiences:
+        other_items = "\n".join(render_timeline_item(i, with_skills=True, minor=True) for i in other_experiences)
+        other_html = f"""          <div class="timeline-secondary">
+            <div class="timeline-secondary-title">Autres expériences</div>
+{other_items}
+          </div>
+"""
     return f"""  <section id="parcours">
     <div class="container">
       <div class="section-head reveal">
@@ -199,6 +209,7 @@ def render_timeline(data):
         <div class="timeline-col">
           <div class="timeline-col-title">Expériences</div>
 {experiences}
+{other_html}
         </div>
       </div>
     </div>
